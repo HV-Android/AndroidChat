@@ -1,6 +1,5 @@
 package edu.galileo.android.androidchat;
 
-import android.provider.ContactsContract;
 
 import com.firebase.client.AuthData;
 import com.firebase.client.DataSnapshot;
@@ -10,7 +9,6 @@ import com.firebase.client.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * Created by HernánDarío on 12/06/2016.
