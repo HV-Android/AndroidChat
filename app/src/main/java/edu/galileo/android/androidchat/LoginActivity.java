@@ -7,19 +7,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
-import butterknife.BindView;
+import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class LoginActivity extends AppCompatActivity {
 
-    @BindView(R.id.editTxtEmail) EditText inputEmail;
-    @BindView(R.id.editTxtPassword) EditText inputPassword;
-    @BindView(R.id.btnSignin) Button btnSignIn;
-    @BindView(R.id.btnSignup) Button btnSignUp;
-    @BindView(R.id.progresBar) ProgressBar progresBar;
-    @BindView(R.id.layoutMainContainer) RelativeLayout container;
+    @Bind(R.id.editTxtEmail) EditText inputEmail;
+    @Bind(R.id.editTxtPassword) EditText inputPassword;
+    @Bind(R.id.btnSignin) Button btnSignIn;
+    @Bind(R.id.btnSignup) Button btnSignUp;
+    @Bind(R.id.progresBar) ProgressBar progresBar;
+    @Bind(R.id.layoutMainContainer) RelativeLayout container;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +31,14 @@ public class LoginActivity extends AppCompatActivity {
 
 
     @OnClick(R.id.btnSignin)
-    public void handleSingIn() {
+    public void handleSignIn() {
+        Toast.makeText(getApplicationContext(),inputEmail.getText().toString(),Toast.LENGTH_LONG).show();
         Log.e("AndroidChat", inputEmail.getText().toString());
     }
 
     @OnClick(R.id.btnSignup)
     public void handleSignUp() {
-
+        Toast.makeText(getApplicationContext(),inputPassword.getText().toString(),Toast.LENGTH_LONG).show();
+        Log.e("AndroidChat", inputPassword.getText().toString());
     }
 }
